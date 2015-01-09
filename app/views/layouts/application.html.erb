@@ -7,8 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class= "container-fluid no-margin no-padding">
+    <nav class="navbar navbar-default">
+      <div class="u-info">
+        <span class="navbar-text text-right no-margin"><%= session[:email_address] %></span>
+        <span class="navbar-text text-right no-margin"><%= session[:user] %></span>
+        <span class="navbar-text text-right no-margin"><%= link_to 'Logout', root_path %></span>
+      </div>
+    </nav>
+  </div>
 
-<%= yield %>
 
+  <%= yield %>
+
+  <!-- ======================== Footer =============================== -->
+  <div class="footer">
+    <div class= "container-fluid no-margin no-padding">
+      <nav class="navbar navbar-inverse no-margin">
+        <p class="navbar-text">Signed in as Mark Otto</p>
+      </nav>
+    </div>
+  </div>
 </body>
 </html>

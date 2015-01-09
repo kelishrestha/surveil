@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-12 p-title">
+      <h1>Project :<span class="label label-primary">Surveil</span></h1>
+    </div>
+  </div>
+
+
+<!-- ============================================================= -->
+  <!-- Row starts -->
+  <div class="row">
+
+    <div class="col-md-9 padding-left">
+      <div class="row">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active">
+          <%= link_to "Project"%>
+          </li>
+          <li role="presentation"><a href="#">Tasks</a></li>
+          <li role="presentation"><%= link_to "Employees", project_employees_path(@project.id) %></li>
+        </ul>
+      </div>
+      <div class="row">
+
+        <div class="jumbotron project-detail">
+          <p>
+            <%=@project.description %>
+          </p>
+            
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-3">
+      <div class="row space">
+        <div class="col-md-12">
+        </div>
+      </div>
+      
+      <ul class="nav nav-pills nav-stacked side-menu">    
+        <% if @admin %>
+          <li role="presentation" class="btn btn-primary"><%= link_to "Add Project", new_project_path%></li>
+          <li role="presentation" class="btn btn-primary"><%= link_to "Add Employee" %></li>
+      <%end%>
+          <li role="presentation" class="btn btn-primary"><%= link_to "New Task" %></li>
+      </ul>
+    </div>
+    
+       
+  </div>

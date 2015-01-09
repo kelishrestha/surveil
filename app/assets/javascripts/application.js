@@ -11,5 +11,14 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require bootstrap.min
+
 //= require jquery_ujs
 //= require_tree .
+
+
+$(function(){
+  $('.side-menu a').on('click',function(){ 
+    console.log(this);
+  })
+})

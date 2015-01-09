@@ -1,0 +1,21 @@
+<div class="container-fluid padding-left">
+  <%= form_for @project, html: {class: 'form-horizontal'} do |fp|%>
+    <div class="form-group">
+      <%= fp.label :title, class: "col-sm-1" %>
+      <%= fp.text_field :title, class: "col-sm-2" %>
+    </div>
+    <div class="form-group">
+      <%= fp.label :description, class: "col-sm-1" %>
+      <%= fp.text_field :description, class: "col-sm-2" %>
+    </div>
+    <div class="form-group">
+      <%= fp.label :deadline, class: "col-sm-1" %>
+      <%= fp.text_field :deadline, class: "col-sm-2" %>
+    </div>
+
+    <%=fp.submit "Submit" %>
+
+  <%end %>
+
+</div>
+

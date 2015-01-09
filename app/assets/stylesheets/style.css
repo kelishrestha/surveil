@@ -1,0 +1,65 @@
+.no-margin {
+  margin:0;
+}
+.no-padding {
+  padding:0;
+}
+
+.project-detail{
+  min-height: 400px;
+}
+
+.padding-left {
+ padding: 0px 16px 0px 30px;
+}
+
+.p-title{
+  margin-bottom: 10px;
+}
+
+.p-title span{
+  margin-left: 40px;
+}
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-text {
+    float: right;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+.u-info{
+  width:30px;
+  float: right;
+}
+
+.footer{
+  bottom: 0px;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.row.space{
+  min-height: 40px;
+}
+
+.side-menu a {
+  color: #fff;
+}
+
+.side-menu a:hover{
+  background-color: #286090 !important;
+  border-color: #204D74 !important;
+}
+
+.side-menu li{
+  padding: 0px !important;
+}

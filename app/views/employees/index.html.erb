@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <!-- Project Title show -->
+  <div class="row">
+    <div class="col-md-12 p-title">
+      <h1>Project :<span class="label label-primary">Surveil</span></h1>
+    </div>
+  </div>
+  <!-- Project title show end -->
+  <!-- ============================================================= -->
+  <!-- Row starts -->
+  <div class="row">
+  <!-- Details -->
+
+    <div class="col-md-9 padding-left">
+      <div class="row">
+        <ul class="nav nav-tabs">
+          <li role="presentation">
+          <%= link_to "Project" ,projects_path%>
+          </li>
+          <li role="presentation"><a href="#">Tasks</a></li>
+          <li role="presentation" class="active"><%= link_to "Employees", project_employees_path(@project.id) %></li>
+        </ul>
+      </div>
+      <div class="row">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>S.N.</th>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Email Address</th>
+            </tr>
+          </thead> 
+          <tbody>
+          <%count = 0 %>
+            <%@employees.each do |e| %>
+              <% count += 1 %>
+                <tr>
+                  <td><%=count%></td>
+                  <td><%=e.name %></td>
+                  <td><%=e.designation %></td>
+                  <td><%=e.email_address %></td>
+                </tr>
+            <%end%>
+          </tbody> 
+        </table>
+      </div>
+    </div>
+  <!-- Details end -->
+  <!-- Side menu -->
+    <div class="col-md-3">
+      <div class="row space">
+        <div class="col-md-12">
+        </div>
+      </div>
+
+      <!-- Side bar actual menu -->
+
+      <ul class="nav nav-pills nav-stacked side-menu">    
+        <% if @admin %>
+          <li role="presentation" class="btn btn-primary"><%= link_to "Add Project"%></li>
+          <li role="presentation" class="btn btn-primary"><%= link_to "Add Employee" %></li>
+        <%end%>
+          <li role="presentation" class="btn btn-primary"><%= link_to "New Task" %></li>
+      </ul>
+      <!-- Side bar actual menu end -->
+    </div>
+  <!-- Side menu end -->     
+  </div>
+  <!-- Row ends -->
+</div>
+
