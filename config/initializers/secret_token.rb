@@ -1,0 +1,1 @@
+Surveil::Application.config.secret_token = "fedeee7f2dcdb5d6c4186a7ac9e3f30ee29e0ba2c83fe5819b00e8839d29a98c8c154274ec29b04ad13d411627acdb2a73cdfc99330caa07565ea6ff02657b65"

@@ -38,7 +38,8 @@
       </div>
       
       <ul class="nav nav-pills nav-stacked side-menu">    
-        <% if @admin %>
+        <% if session[:admin] %>
+          <li role="presentation" class="btn btn-primary"><%= link_to "All Projects", projects_path%></li>
           <li role="presentation" class="btn btn-primary"><%= link_to "Add Project", new_project_path%></li>
           <li role="presentation" class="btn btn-primary"><%= link_to "Add Employee" %></li>
       <%end%>

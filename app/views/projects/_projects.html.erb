@@ -11,6 +11,13 @@
       <p><%=p.description%></p>
     </div>
 
+    <div class="panel-footer">
+      <p>Deadline: <span><i><%=p.deadline%></i></span></p>
+      <div class="view-detail">
+      	<%= link_to "View Detail", project_path(p.id)%>
+      </div>
+    </div>
+
   </div> 
 <%end%> 
 </div>

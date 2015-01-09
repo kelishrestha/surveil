@@ -5,7 +5,8 @@ class ProjectsController < ApplicationController
     if @admin 
       @projects = Project.all
     else
-      @project = @employee.project
+      redirect_to project_path(@employee.project_id)
+      # @project = @employee.project
     end
     
     # binding.pry
@@ -17,12 +18,14 @@ class ProjectsController < ApplicationController
     @password = params[:password]
 
     @employee = Employee.where(email_address: @email).where(password: @password)
+    @employee.first.designation == 'super-admin'? @admin = true : @admin = false
     # binding.pry
     if @employee.count == 0
       redirect_to :back
     else
       session[:email_address] = @employee.first.email_address
       session[:user] = @employee.first.username
+      session[:admin] = @admin
       redirect_to projects_path
     end
   end
@@ -36,6 +39,13 @@ class ProjectsController < ApplicationController
     @project.status = "ongoing"
     @project.save
     redirect_to projects_path
+  end
+
+  def show
+    # binding.pry
+    @project = Project.find(params[:id])
+
+   # binding.pry
   end
 
 end
